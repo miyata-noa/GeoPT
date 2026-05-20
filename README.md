@@ -1,4 +1,4 @@
-# <img src=".\pic\logo.png" alt="Logo" width="30" style="vertical-align: middle;">GeoPT
+# <img src=".\pic\logo.png" alt="Logo" width="30" style="vertical-align: middle;">GeoPT (ICML 2026)
 
 [![Project Page](https://img.shields.io/badge/Project_Page-blue)](https://physics-scaling.github.io/GeoPT/)
 [![Paper](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg?logo=arxiv)](https://arxiv.org/abs/2602.20399)
@@ -82,10 +82,10 @@ bash ./scripts/from_scratch_normal_cond/Transolver_craft.sh
 If you find this repo useful, please cite our paper. 
 
 ```latex
-@article{wu2026GeoPT,
+@inproceedings{wu2026GeoPT,
   title={GeoPT: Scaling Physics Simulation via Lifted Geometric Pre-Training},
-  author={Haixu Wu, Minghao Guo, Zongyi Li, Zhiyang Dou, Mingsheng Long, Kaiming He, Wojciech Matusik},
-  booktitle={arXiv preprint arXiv:2602.20399},
+  author={Wu, Haixu and Guo, Minghao and Li, Zongyi and Dou, Zhiyang and Long, Mingsheng and He, Kaiming and Matusik, Wojciech},
+  booktitle={ICML},
   year={2026}
 }
 ```
