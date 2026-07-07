@@ -1,13 +1,13 @@
 python run.py \
---gpu 2 \
---data_path ./dtchull_npys \
---loader DTCHull \
+--gpu 0 \
+--data_path ./aircraft_npys \
+--loader AirCraft \
 --task GeoPT_finetune \
---dynamics hull \
+--dynamics craft \
 --geotype unstructured \
 --space_dim 3 \
 --fun_dim 11 \
---out_dim 4 \
+--out_dim 6 \
 --normalize 1 \
 --model Transolver \
 --n_hidden 256 \
@@ -15,9 +15,12 @@ python run.py \
 --n_layers 8 \
 --mlp_ratio 2 \
 --slice_num 32 \
---ntrain 100 \
---ntest 20 \
+--ntrain 60 \
+--ntest 50 \
 --batch-size 1 \
---epochs 200 \
+--epochs 20 \
 --eval 0 \
---save_name dtchull_transolver_8layers_geopt_cond
+--save_name craft_geopt_8layers_n60 \
+--finetune 1 \
+--finetune_name GeoPT_8layers
+

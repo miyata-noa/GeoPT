@@ -156,6 +156,12 @@ class Exp_Steady(Exp_Basic):
                 if id < self.args.vis_num:
                     print('visual: ', id)
                     visual(x, y, out, self.args, id)
+                    import numpy as _np, os as _os
+                    _outd = './results/' + self.args.save_name + '/'
+                    _os.makedirs(_outd, exist_ok=True)
+                    _np.save(_outd + f'x_raw_{id}.npy', x.detach().cpu().numpy())
+                    _np.save(_outd + f'y_raw_{id}.npy', y.detach().cpu().numpy())
+                    _np.save(_outd + f'out_raw_{id}.npy', out.detach().cpu().numpy())
 
         rel_err /= self.args.ntest
         mse /= self.args.ntest
@@ -201,6 +207,12 @@ class Exp_Steady(Exp_Basic):
                 if id < self.args.vis_num:
                     print('visual: ', id)
                     visual(x, y, out, self.args, id)
+                    import numpy as _np, os as _os
+                    _outd = './results/' + self.args.save_name + '/'
+                    _os.makedirs(_outd, exist_ok=True)
+                    _np.save(_outd + f'x_raw_{id}.npy', x.detach().cpu().numpy())
+                    _np.save(_outd + f'y_raw_{id}.npy', y.detach().cpu().numpy())
+                    _np.save(_outd + f'out_raw_{id}.npy', out.detach().cpu().numpy())
 
         rel_err /= self.args.ntest
         mse /= self.args.ntest

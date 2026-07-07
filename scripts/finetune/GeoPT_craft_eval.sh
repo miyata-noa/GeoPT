@@ -19,7 +19,7 @@ python run.py \
 --ntest 50 \
 --batch-size 1 \
 --epochs 20 \
---eval 0 \
+--eval 1 \
 --save_name craft_geopt_8layers \
 --finetune 1 \
 --finetune_name GeoPT_8layers

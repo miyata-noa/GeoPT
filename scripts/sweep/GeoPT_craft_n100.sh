@@ -20,7 +20,7 @@ python run.py \
 --batch-size 1 \
 --epochs 20 \
 --eval 0 \
---save_name craft_geopt_8layers \
+--save_name craft_geopt_8layers_n100 \
 --finetune 1 \
 --finetune_name GeoPT_8layers
 

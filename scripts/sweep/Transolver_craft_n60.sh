@@ -2,11 +2,11 @@ python run.py \
 --gpu 0 \
 --data_path ./aircraft_npys \
 --loader AirCraft \
---task GeoPT_finetune \
+--task steady_cond \
 --dynamics craft \
 --geotype unstructured \
 --space_dim 3 \
---fun_dim 11 \
+--fun_dim 10 \
 --out_dim 6 \
 --normalize 1 \
 --model Transolver \
@@ -15,12 +15,10 @@ python run.py \
 --n_layers 8 \
 --mlp_ratio 2 \
 --slice_num 32 \
---ntrain 100 \
+--ntrain 60 \
 --ntest 50 \
 --batch-size 1 \
---epochs 20 \
+--epochs 200 \
 --eval 0 \
---save_name craft_geopt_8layers \
---finetune 1 \
---finetune_name GeoPT_8layers
+--save_name craft_transolver_8layers_normal_cond_n60
 

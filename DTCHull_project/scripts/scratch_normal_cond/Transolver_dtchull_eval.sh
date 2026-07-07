@@ -1,12 +1,12 @@
 python run.py \
---gpu 3 \
---data_path ./dtchull_npys \
+--gpu 0 \
+--data_path ./DTCHull_project/data \
 --loader DTCHull \
---task GeoPT_finetune \
+--task steady_cond \
 --dynamics hull \
 --geotype unstructured \
 --space_dim 3 \
---fun_dim 11 \
+--fun_dim 8 \
 --out_dim 4 \
 --normalize 1 \
 --model Transolver \
@@ -19,7 +19,5 @@ python run.py \
 --ntest 20 \
 --batch-size 1 \
 --epochs 200 \
---eval 0 \
---save_name hull_geopt_transolver_new_data_correct \
---finetune 1 \
---finetune_name GeoPT_8layers
+--eval 1 \
+--save_name dtchull_transolver_8layers_normal_cond

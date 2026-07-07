@@ -1,13 +1,13 @@
 python run.py \
---gpu 6 \
---data_path ./dtchull_npys \
---loader DTCHull \
+--gpu 0 \
+--data_path ./aircraft_npys \
+--loader AirCraft \
 --task steady_cond \
---dynamics hull \
+--dynamics craft \
 --geotype unstructured \
 --space_dim 3 \
---fun_dim 8 \
---out_dim 4 \
+--fun_dim 10 \
+--out_dim 6 \
 --normalize 1 \
 --model Transolver \
 --n_hidden 256 \
@@ -15,9 +15,10 @@ python run.py \
 --n_layers 8 \
 --mlp_ratio 2 \
 --slice_num 32 \
---ntrain 100 \
---ntest 20 \
+--ntrain 40 \
+--ntest 50 \
 --batch-size 1 \
 --epochs 200 \
 --eval 0 \
---save_name dtchull_transolver_8layers_normal_cond
+--save_name craft_transolver_8layers_normal_cond_n40
+

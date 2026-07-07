@@ -14,6 +14,10 @@ def visual(x, y, out, args, id):
         visual_unstructured_2d(x, y, out, args, id)
     if args.geotype == 'unstructured' and x.shape[-1] == 3:
         visual_unstructured_3d(x, y, out, args, id)
+    if args.geotype == 'unstructured' and x.shape[-1] > 3 and args.space_dim == 3:
+        visual_unstructured_3d(x[:, :, :3], y, out, args, id)
+    if args.geotype == 'unstructured' and x.shape[-1] > 2 and args.space_dim == 2:
+        visual_unstructured_2d(x[:, :, :2], y, out, args, id)
 
 
 def visual_unstructured_3d(x, y, out, args, id, channel=0):
